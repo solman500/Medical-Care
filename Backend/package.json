@@ -8,6 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "start-dev": "nodemon index.js"
+    
   },
   "author": "ahmed soliman",
   "license": "ISC",
@@ -20,6 +21,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.4.0",
     "mongoose": "^8.2.0",
+    "node-fetch": "^3.3.2",
     "stripe": "^14.21.0"
   },
   "devDependencies": {
