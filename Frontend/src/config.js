@@ -1,2 +1,2 @@
-export const BASE_URL='http://localhost:5000/api/v1' 
+export const BASE_URL='https://vercel.com/solman500s-projects/medical-care'
 export const token = localStorage.getItem("token")
