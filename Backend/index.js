@@ -15,8 +15,10 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 const corsOptions = {
-  origin: true,
+  origin: "https://medical-care-3bn3.vercel.app/",
+  credentials: true
 };
+
 
 app.get("/", (req, res) => {
   res.send("Hello World");
