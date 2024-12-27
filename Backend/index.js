@@ -12,7 +12,7 @@ import bookingRoute from "./Routes/booking.js";
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 
 const corsOptions = {
   origin: true,
@@ -43,5 +43,7 @@ app.use("/api/v1/doctors", doctorRoute);
 app.use("/api/v1/reviews", reviewRoute);
 app.use("/api/v1/bookings", bookingRoute);
 
-// Export the app for Vercel
-export default app;
+app.listen(port, () => {
+  connectDB();
+  console.log(`Server is running on port ${port}`);
+});
