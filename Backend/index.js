@@ -12,7 +12,7 @@ import bookingRoute from "./Routes/booking.js";
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 3000;
 
 const corsOptions = {
   origin: true,
@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 mongoose.set("strictQuery", false);
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URL);
+    await mongoose.connect(process.env.MONGO_URL);
     console.log(`MongoDB connected`);
   } catch (error) {
     console.error(`Error: ${error.message}`);
@@ -43,7 +43,5 @@ app.use("/api/v1/doctors", doctorRoute);
 app.use("/api/v1/reviews", reviewRoute);
 app.use("/api/v1/bookings", bookingRoute);
 
-app.listen(port, () => {
-  connectDB();
-  console.log(`Server is running on port ${port}`);
-});
+// Export the app for Vercel
+export default app;

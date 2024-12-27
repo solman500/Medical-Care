@@ -13,9 +13,9 @@ body {
 .swiper-pagination-bullet {
   width: 12px !important;
   height: 12px !important;
-  border:1px solid #181a1e !important;
+  border: 1px solid #181a1e !important;
   background: #fff !important;
-  opacity: 100% !important; 
+  opacity: 100% !important;
 }
 
 .swiper-pagination-bullet-active {
@@ -23,25 +23,23 @@ body {
   border: none !important;
 }
 
-.swiper{
+.swiper {
   padding-bottom: 70px !important;
 }
 
-.swiper-slide.swiper-slide-next h4 ,.swiper-slide.swiper-slide-next p{
- color: #fff !important;
+.swiper-slide.swiper-slide-next h4,
+.swiper-slide.swiper-slide-next p {
+  color: #fff !important;
 }
-.swiper-slide.swiper-slide-next{
+.swiper-slide.swiper-slide-next {
   background: #0067ff;
   border-radius: 12px;
-  box-shadow: 0px 20px 70px  rgba(0,103,255,0.3)!important;
+  box-shadow: 0px 20px 70px rgba(0, 103, 255, 0.3) !important;
 }
 
-.swiper-pagination{
+.swiper-pagination {
   top: 90% !important;
 }
-
-
-
 
 .stickey__header {
   position: sticky;
@@ -52,7 +50,7 @@ body {
   z-index: 99999;
   background-color: #fff;
   line-height: 80px;
-  background:white;
+  background: white;
   box-shadow: 3px 3px -8px 3px #ddd;
 }
 
@@ -79,13 +77,11 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    background: #fff; 
+    background: #fff;
     line-height: 30px;
   }
 
-  .show__menu{
+  .show__menu {
     display: block;
   }
 }
-
-
