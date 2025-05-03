@@ -23,6 +23,7 @@ const navLinks = [
     display: "Contact",
   },
 ];
+
 const Header = () => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
@@ -47,15 +48,15 @@ const Header = () => {
   const toggleMenu = () => menuRef.current.classList.toggle("show__menu");
 
   return (
-    <header className="header flex items-center " ref={headerRef}>
+    <header className="header flex items-center" ref={headerRef}>
       <div className="container">
         <div className="flex items-center justify-between">
-          <div>
-            <img src={logo} alt="logo" />
+          <div className="flex items-center">
+            <img src={logo} alt="logo" className="w-[120px] md:w-auto" />
           </div>
 
-          <div className="navigation " ref={menuRef} onClick={toggleMenu}>
-            <ul className="menu flex items-center gap-[2.7rem]">
+          <div className="navigation" ref={menuRef} onClick={toggleMenu}>
+            <ul className="menu flex flex-col md:flex-row items-center gap-[2.7rem]">
               {navLinks.map((link, index) => (
                 <li key={index}>
                   <NavLink
@@ -63,7 +64,7 @@ const Header = () => {
                     className={(navClass) =>
                       navClass.isActive
                         ? "text-primaryColor text-[16px] leading-7 font-[600]"
-                        : "text-textColor text-[16px] leading-7 font-[500] hover:text-primaryColor "
+                        : "text-textColor text-[16px] leading-7 font-[500] hover:text-primaryColor"
                     }
                   >
                     {link.display}
@@ -73,9 +74,9 @@ const Header = () => {
             </ul>
           </div>
 
-          <div className="  items-center  relative">
+          <div className="flex items-center gap-4">
             {token && user ? (
-              <div>
+              <div className="hidden md:block">
                 <Link
                   to={`${
                     role === "doctor"
@@ -83,20 +84,18 @@ const Header = () => {
                       : "/users/profile/me"
                   }`}
                 >
-                  <div className="flex justify-center items-center space-x-1">
-
-                  <img
-                    src={user?.photo}
-                    alt="user"
-                    className="  rounded-full w-[35px] h-[35px]  cursor-pointer"
-                  />
-
-                  <h2 className="">{user?.name}</h2>
+                  <div className="flex items-center space-x-2">
+                    <img
+                      src={user?.photo}
+                      alt="user"
+                      className="rounded-full w-[35px] h-[35px] cursor-pointer"
+                    />
+                    <h2 className="text-textColor text-[14px] font-[500]">{user?.name}</h2>
                   </div>
                 </Link>
               </div>
             ) : (
-              <Link to="/login">
+              <Link to="/login" className="hidden md:block">
                 <button className="bg-primaryColor text-white text-[14px] leading-4 font-[600] py-2 px-6 flex items-center justify-center rounded-[50px]">
                   Login
                 </button>
