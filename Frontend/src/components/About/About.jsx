@@ -9,7 +9,7 @@ const About = () => {
         <div className="flex  justify-between items-center gap-[50px] lg:gap-[130px] xl:gap-0 flex-col lg:flex-row">
           <div className="relative w-3/4 lg:w-1/2 xl:w-[770px] z-10 order-2 lg:order-1">
             <img src={aboutImg} alt="about" />
-            <div className="absolute z-20  md:w-[300px] bottom-4 w-[200px] right-[-30%] md:right-[-7%] lg:right-[22%]">
+            <div className="absolute z-20  md:w-[300px] bottom-4 w-[200px] right-[-25%] md:right-[-7%] lg:right-[22%]">
               <img src={aboutCardImg} alt="about" />
             </div>
           </div>
