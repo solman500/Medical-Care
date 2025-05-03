@@ -51,8 +51,10 @@ const Header = () => {
     <header className="header flex items-center" ref={headerRef}>
       <div className="container">
         <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <img src={logo} alt="logo" className="w-[120px] md:w-auto" />
+        <div className="flex items-center">
+            <Link to="/home">
+              <img src={logo} alt="logo" className="w-[120px] md:w-auto" />
+            </Link>
           </div>
 
           <div className="navigation" ref={menuRef} onClick={toggleMenu}>
@@ -95,7 +97,7 @@ const Header = () => {
                 </Link>
               </div>
             ) : (
-              <Link to="/login" className="hidden md:block">
+              <Link to="/login">
                 <button className="bg-primaryColor text-white text-[14px] leading-4 font-[600] py-2 px-6 flex items-center justify-center rounded-[50px]">
                   Login
                 </button>
